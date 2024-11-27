@@ -17,7 +17,7 @@ This is a simple Node.js app that interacts with a PostgreSQL database to manage
 
 ### 1. Clone the repository
 
-git clone https://github.com/yourusername/usernames-db-app.git
+git clone https://github.com/McTintor/express-postgre-users-app.git
 cd usernames-db-app
 
 ### 2. Install dependencies
