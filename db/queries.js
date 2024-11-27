@@ -1,7 +1,12 @@
 const pool = require("./pool");  // Import the pool instance from pool.js
 
-async function getAllUsernames() {
-  const { rows } = await pool.query("SELECT * FROM usernames");
+async function getAllUsernames(search = "") {
+  const query = search
+    ? "SELECT * FROM usernames WHERE username ILIKE $1"
+    : "SELECT * FROM usernames";
+  const values = search ? [`%${search}%`] : [];
+  
+  const { rows } = await pool.query(query, values);
   return rows;
 }
 
