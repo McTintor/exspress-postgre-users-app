@@ -1,0 +1,9 @@
+<%- include('navigation.ejs') %>
+
+<% for (let user of users) { %>
+    <div class="user">
+        <h2><%= user.username %></h2>
+    </div>
+<% } %>
+    
+<%- include('footer.ejs') %>

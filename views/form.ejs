@@ -1,0 +1,9 @@
+<%- include('navigation.ejs') %>
+
+    <form action="/new" method="POST">
+
+        <label for="username">User:</label>
+        <input type="text" name="username" id="username" required>
+            <button class="btn" type="submit">Add New User</button>
+    </form>
+<%- include('footer.ejs') %>
