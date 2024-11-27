@@ -46,5 +46,5 @@ node db/populatedb.js <your_database_connection_string>
  - GET /delete: Delete all usernames from the database.
 
 ## Usage
-Search: Visit GET /?search=sup to search for usernames that contain "sup".
-Delete all: Visit GET /delete to remove all usernames from the database.
+ - Search: Visit GET /?search=sup to search for usernames that contain "sup".
+ - Delete all: Visit GET /delete to remove all usernames from the database.
