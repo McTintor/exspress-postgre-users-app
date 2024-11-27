@@ -31,8 +31,20 @@ const postSaveUser = async (req, res, next) => {
     res.redirect("/");
 }
 
+const getDelete = async (req, res, next) => {
+    try {
+        await db.deleteAllUsernames(); // Call the function to delete all usernames
+        console.log("All usernames have been deleted.");
+        res.redirect('/');
+      } catch (err) {
+        console.error("Error deleting usernames:", err);
+        res.status(500).json({ error: "Internal server error" });
+      }
+}
+
 module.exports = {
     getUsers,
     getForm,
-    postSaveUser
+    postSaveUser,
+    getDelete
 }
